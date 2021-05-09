@@ -1,0 +1,325 @@
+:root{
+  --primary-color:#c72727;
+  --secondary-color:#f99500;
+  --light-color:#f3f3f3;
+  --dark-color:#333;
+  --max-width: 1100px;
+}
+
+.category{
+	--sports-color: #f99500;
+	--ent-color:#a66bbe;
+	--tech-color:#009cff;
+
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "Lato", sans-serif;
+	line-height: 1.5;
+	background: var(--light-color);
+}
+
+a{
+	color: #333;
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+p{
+	margin:0.5rem;
+}
+
+img{
+	width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: "Staatliches", cursive;
+	margin-bottom: .55rem;
+	line-height: 1.3;
+}
+
+/*Utility*/
+.container{
+	max-width: var(--max-width);
+	margin: auto;
+	padding: 0 2rem;
+	overflow: hidden;
+}
+
+.category{
+	display: inline-block;
+	color: #fff;
+	font-size: 0.55rem;
+	text-transform: uppercase;
+	padding: 0.4rem 0.6rem;
+	border-radius: 15px;
+	margin-bottom: 0.5rem;
+}
+
+.category-sports{background: var(--sports-color);}
+.category-ent{background: var(--ent-color);}
+.category-tech{background: var(--tech-color);}
+
+.btn{
+   display:inline-block;
+   border: none;
+   background: var(--dark-color);/*kasnije cemo pozadina odrediti posebno za svaku vrstu buttona, a ovo neka ostane ako neki nije odredjen*/
+   color: #fff;
+   padding: 0.5rem 1.5rem;
+}
+
+.btn-light{background: var(--light-color);}
+.btn-primary{background: var(--primary-color);}
+.btn-light{background: var(--secondary-color);}
+
+.btn:hover{
+	opacity: 0.9;/*Ovo je dobra fora, bez obzira koje je boje button, on ce odraditi opaciti*/
+}
+
+.btn-block{
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.card{
+	background: #fff;
+	padding: 1rem;
+}
+
+.bg-dark{
+	background: var(--dark-color);
+	color: #fff;
+}
+.bg-primary{
+	background: var(--primary-color);
+	color: #fff;
+}
+.bg-secondary{
+	background: var(--secondary-color);
+	color: #fff;
+}
+
+.py-1{padding: 1.5rem 0}
+.py-2{padding: 2rem 0}
+.py-3{padding: 3rem 0}
+.p-1{padding: 1.5rem}
+.p-2{padding: 2rem}
+.p-3{padding: 3rem}
+
+.l-heading{
+	font-size: 3rem;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a{
+	color: #fff;/*Ovo smo morali, jer u npr bg-dark ne radi, jer nije direktno odredjeno kao sto je odredjena prethodna crna boja*/
+}
+
+.list li{
+	padding: .5rem;
+	border-bottom: #555 dotted 1px;
+	width: 90%;
+}
+
+.list li a:hover{
+	color: var(--primary-color) !important; /*Ovo nam nije radilo, pa smo stavili ovo imporatnt da nadjaca druge selektore*/
+}
+
+/*Inner Page Grid Container*/
+.page-container{
+	display: grid;
+	grid-template-columns: 5fr 2fr;
+	margin: 2rem 0;
+	grid-gap: 1.5rem;
+}
+.page-container>*:first-child{/*mi smo na ovaj nacin selektovali ovaj prvi veliki div*/
+	grid-row: 1/span 3;/*pokusaj da razumes tebi je pre ovoga join our club bio iste visine,
+	pa si ti selektovao ovaj veliki i rekao si da je on visok 3 reda, on ce ostati isti, ali ce se automatski smanjiti ovaj drugi za 3
+	ali sve sledece sto ubacimo ubacivace ispod tog crvenog. TO sam se ja cak pitao kako on odredjuje sta su tri reda,
+	a zapravo je to izgleda relativno(odnosno zavisi od tog contenta)*/
+}
+
+
+/*Navigation*/
+#main-nav{
+	background: #fff;/*vidi se razlika u odnosu na klasicnu belu boju*/
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+/*Sada cemo od kontejnera napraviti grid, jer ne zelimo da on buce child, zato vodimo racuna da selektujemo bas taj kontejner,a ne drugi*/
+
+#main-nav .container{
+	display: grid;
+	grid-template-columns: 6fr 3fr 2fr;
+	padding: 1rem;
+	align-items: center; /*ja sam mislio da je ovo u okviru Flexa OBRATI PAZNJU-KORISNA OPCIJA*/
+}
+
+#main-nav .logo{
+	width: 180px;
+}
+
+#main-nav ul{
+	justify-self:end;/*Izgleda da mi ovo mozemo koristiti i bez flexa*/
+	display: flex;/*Sada se automastki home i about prebacuju u jedan red*/
+}
+
+#main-nav ul li a{
+	padding: 0.75rem;
+	font-weight: bold;
+}
+
+#main-nav ul li a.current{
+	background: var(--primary-color);
+	color: #fff;
+}
+
+#main-nav ul li a:hover{
+	background: var(--light-color);
+	color: var(--dark-color);
+}
+
+#main-nav .social{
+	justify-self:center;
+}
+
+#main-nav .social i{
+	color: #777;
+	margin-right: .5rem;
+}
+
+
+/*Showcase*/
+
+#showcase{
+	color: #fff;
+	background: #333;
+	padding: 2rem;
+	position: relative;/*beforse sudo selcetor mora biti absolute, a absolute zavisi od prvog relativnog containera*/
+	
+}
+
+#showcase:before{
+	content: "";
+	background: url("featured.jpg") no-repeat center center/cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.4;	
+}
+
+#showcase .showcase-container{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);/*Ovo smo uradili iako imamo samo jedan item.Upamti foru, ako zelis da bude na pola*/
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+}
+
+#showcase .showcase-content{
+	z-index: 1; /*Ovo radimo, jer su nam se i slova providla, odnosno pozadina je bila "iznad" slova*/
+}
+
+#showcase .showcase-content p{
+	margin-bottom: 1rem;/*Ovo smo uradili da udaljimo malo onaj button, a ovde smo uradili, jer je verovatno lakse selektovati ovo*/
+}
+
+
+/*----Home Articles----*/
+#home-articles .articles-container{
+	display: grid;
+	grid-template-columns:repeat(3,1fr);
+	grid-gap: 1rem;
+}
+
+#home-articles .articles-container >*:first-child,
+#home-articles .articles-container >*:last-child{/*Ove smo stavili tu strelicu umesto article, jer ako to promenimo u div, nece biti selektovano*/
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 1rem;
+	align-items: center;
+	grid-column: 1/ span 2;/*Izuzetno dobra stvar, cini mi se da ovo ne bi mogao koristiti u flexu,mozda i bi, ali ovako je lakse*/
+}
+
+#home-articles .articles-container >*:last-child{
+	grid-column: 2/span 2;/*nemoj zaboraviti da ti sa ovim upravljas childovima unutar grida, i jako je mocno*/
+}
+
+#article .meta{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;/*iako smo ovo odraili, ne izgleda ovaj ljubicast deo centrirano, pa cemo to sa margin top dole*/
+	background: #eee;
+	padding: 0.5rem;
+}
+
+#article .meta .category{
+	margin-top: 0.4rem;
+}
+
+
+
+/*-----Footer-----*/
+#main-footer{
+	background: var(--dark-color);
+	color: #fff;
+}
+
+#main-footer img{
+	width: 150px;
+}
+
+#main-footer a{
+	color: #fff;
+}
+
+#main-footer .footer-container{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-gap: 1.5rem;
+}
+
+#main-footer .footer-container >*:last-child{/*Ovo pogledaj, jako je vazno, ovo nisi znao da pozicioniras*/
+	background: #444;
+	grid-column: 1/span 4; /*zapamti, ovako upravljas sa pojedinacnim, a ako ti treba centrirano onda ubacis text-align*/
+	padding: 1.5rem;
+	text-align: center;
+	font-size: 0.75rem;
+}
+
+#main-footer .footer-container input[type="email"]{
+	width: 90%;
+	padding:0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type="submit"]{
+	width: 90%;
+}
+
+
+

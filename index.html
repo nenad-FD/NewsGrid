@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width:768px)" href="css/mobile.css">
+	<script src="https://kit.fontawesome.com/7e05fc2651.js" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<title>NewsGrid | Latest News</title>
+</head>
+<body>
+	<!--Navigation-->
+	<nav id="main-nav">
+		<div class="container">
+			<img src="img/logo.png" alt="Logo" class="logo">
+			<div class="social">
+				<a href="http://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+				<a href="http://twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+				<a href="http://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+				<a href="http://youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+			</div>
+			<ul>
+				<li><a href="index.html" class="current" target="_blank">Home</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+		</div>
+	</nav>
+
+    <!--Showcase-->
+	<header id="showcase">
+		<div class="container"><!--zelimo da bude na sredini, ali  zelimo onaj grid showcase, pa cemo dole zato napraviti jos jedan div-->
+			<div class="showcase-container">
+				<div class="showcase-content">
+					<div class="category category-sports">Sports</div><!--ovo koristimo za obican tekst,kao sto vidis-->
+					<h1>Some Sports Article</h1>
+					<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Eveniet, dicta. Quea quo tompre repellendus, enim nulla in sapiente consequtetatur soluta.Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<a href="article.html" class="btn btn-primary">Read More</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<!--Komentar vezan za Home Articles: So CARD is something you see often in frameworks like bootstrap where you have maybe a background like this and some padding just something to put your content into rather than just having the text and images just you know 
+	just just floating there with just the background.-->
+
+	<!-- Home Articles-->
+<section id="home-articles" class="py-2">  
+	<div class="container">
+		<h2>Editor Picks</h2>
+		<div class="articles-container">
+			<article class="card">
+				<img src="img/articles/ent1.jpg" alt="">
+				<div>
+					<div class="category category-ent">Entertaimnet</div>
+					<h3>
+						<a href="article.html">Lorem ipsum dolor sit amet</a>
+					</h3>
+					<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Eveniet, dicta. Quea quo tompre repellendus, enim nulla in sapiente consequtetatur soluta.Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+			</article>
+			<article class="card bg-dark">
+					<div class="category category-sports">Sports</div>
+					<h3>
+						<a href="article.html">Lorem ipsum dolor sit amet</a>
+					</h3>
+					<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Eveniet, dicta. Quea quo tompre repellendus, enim nulla in sapiente consequtetatur soluta.Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</article>
+			<article class="card">
+				    <img src="img/articles/tech1.jpg">
+					<div class="category category-tech">Technology</div>
+					<h3>
+						<a href="article.html">Lorem ipsum dolor sit amet</a>
+					</h3>
+					<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Eveniet, dicta. Quea quo tompre repellendus, enim nulla in sapiente consequtetatur soluta.Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</article>
+			<article class="card">
+					<div class="category category-sports">Sports</div>
+					<h3>
+						<a href="article.html">Lorem ipsum dolor sit amet</a>
+					</h3>
+					<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Eveniet, dicta. Quea quo tompre repellendus, enim nulla in sapiente consequtetatur soluta.Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					 <img src="img/articles/sports1.jpg">
+			</article>
+			<article class="card">
+				    <img src="img/articles/tech2.jpg">
+					<div class="category category-tech">Technology</div>
+					<h3>
+						<a href="article.html">Lorem ipsum dolor sit amet</a>
+					</h3>
+					<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Eveniet, dicta. Quea quo tompre repellendus, enim nulla in sapiente consequtetatur soluta.Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</article>
+			<article class="card bg-primary">
+					<div class="category category-sports">Sports</div>
+					<h3>
+						<a href="article.html">Lorem ipsum dolor sit amet</a>
+					</h3>
+					<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Eveniet, dicta. Quea quo tompre repellendus, enim nulla in sapiente consequtetatur soluta.Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</article>
+			<article class="card">
+				<div>
+					<div class="category category-ent">Entertaimnet</div>
+					<h3>
+						<a href="article.html">Lorem ipsum dolor sit amet</a>
+					</h3>
+					<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Eveniet, dicta. Quea quo tompre repellendus, enim nulla in sapiente consequtetatur soluta.Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+				<img src="img/articles/ent2.jpg" alt="">
+			</article>
+		</div>
+	</div> 
+</section>
+
+<!---------Footer------------>
+<footer id="main-footer" class="py-2">
+	<div class="container">
+		<div class="footer-container">
+			<div>
+				<img src="img/logo_light.png" alt="NewsGrid">
+				<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Eveniet, dicta. Quea quo tompre repellendus, enim nulla in sapiente consequtetatur soluta.Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+			<div>
+				<h3>Email Newsletter</h3>
+				<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<form>
+					<input type="email" placeholder="Enter Email...">
+					<input type="submit" value="Subscribe" class="btn btn-primary">
+				</form>
+			</div>
+			<div>
+				<h3>Site Links</h3>
+				<ul class="list">
+					<li><a href="#">Help & Support</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Join Our Club</h3>
+				<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<a href="#" class="btn bg-secondary">Join Now</a>
+			</div>
+			<div>
+				<p>Copyright &copy; 2020, All Rights Reserved</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+</body>
+</html>
